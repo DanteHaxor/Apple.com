@@ -1,6 +1,7 @@
 const express=require("express")
 const app=express()
 const connection=require("./config/db")
+const path=require("path")
 require("dotenv").config()
 const cors=require("cors")
 app.use(express.json())
