@@ -11,6 +11,9 @@ app.get("/",(req,res)=>{
     app.use(express.static(path.join(__dirname,"client","dist")))
     res.sendFile(path.resolve(__dirname,"client","dist","index.html"))
 })
+app.get("/api",(req,res)=>{
+    res.send({"msg":"welcome"})
+})
 app.use("/api/user",require("./routes/user.route"))
 app.listen(process.env.PORT,async ()=>{
     try {
