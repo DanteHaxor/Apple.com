@@ -2,6 +2,7 @@ const express=require('express')
 const userRouter=express.Router()
 const bcrypt=require("bcrypt")
 const Usermodel = require("../models/user.model")
+const jwt=require("jsonwebtoken")
 require("dotenv").config()
 userRouter.post("/register",(req,res)=>{
     let {firstname,lastname,country,dob,email,password}=req.body
