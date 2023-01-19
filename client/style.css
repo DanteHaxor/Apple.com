@@ -282,7 +282,7 @@ main {
 }
 
 .iphone-14 {
-  background-image: url(/Assets/iphone-14.webp);
+  background-image: url(/assets/iphone-14.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -354,7 +354,7 @@ main {
 }
 
 .gift {
-  background-image: url(/Assets/presente.webp);
+  background-image: url(/assets/presente.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -457,7 +457,7 @@ main {
 }
 
 .ipad {
-  background-image: url(/Assets/ipad.webp);
+  background-image: url(/assets/ipad.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -528,7 +528,7 @@ main {
 }
 
 .iphone-14-pro {
-  background-image: url(/Assets/iphone-14-pro.webp);
+  background-image: url(/assets/iphone-14-pro.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -560,14 +560,14 @@ main {
 }
 
 .airpods-pro {
-  background-image: url(/Assets/airpods.webp);
+  background-image: url(/assets/airpods.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .watch-series-8 {
-  background-image: url(/Assets/watch-series-8.webp);
+  background-image: url(/assets/watch-series-8.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -594,7 +594,7 @@ main {
 }
 
 .watch-ultra {
-  background-image: url(/Assets//watch-ultra.webp);
+  background-image: url(/assets//watch-ultra.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -621,7 +621,7 @@ main {
 
 .ipad-pro {
   margin-top: 10px;
-  background-image: url(/Assets/ipad-pro.webp);
+  background-image: url(/assets/ipad-pro.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -674,7 +674,7 @@ main {
 
 .fitness {
   margin-top: 10px;
-  background-image: url(/Assets/fitness.webp);
+  background-image: url(/assets/fitness.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1209,28 +1209,28 @@ main {
 
 @media (max-width: 734px) {
   .iphone-14 {
-    background-image: url(/Assets/iphone-14.webp);
+    background-image: url(/assets/iphone-14.webp);
   }
 
   .ipad {
-    background-image: url(/Assets/ipad-mobile.webp);
+    background-image: url(/assets/ipad-mobile.webp);
     justify-content: flex-start;
   }
 
   .iphone-14-pro {
-    background-image: url(/Assets/iphone-14-pro-mobile.webp);
+    background-image: url(/assets/iphone-14-pro-mobile.webp);
   }
 
   .airpods-pro {
-    background-image: url(Assets/airpods-mobile.webp);
+    background-image: url(assets/airpods-mobile.webp);
   }
 
   .watch-series-8 {
-    background-image: url(Assets/watch-series-8-mobile.webp);
+    background-image: url(assets/watch-series-8-mobile.webp);
   }
 
   .ipad-pro {
-    background-image: url(Assets/ipad-pro-mobile.webp);
+    background-image: url(assets/ipad-pro-mobile.webp);
   }
 
   .iphone-14 {
