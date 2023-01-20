@@ -13,8 +13,8 @@ app.get("/",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"client","dist","index.html"))
 })
 app.get("/admin",(req,res)=>{
-    app.use(express.static(path.join(__dirname,"client","dist","Admin")))
-    res.sendFile(path.resolve(__dirname,"client","dist","Admin","login.html"))
+    app.use(express.static(path.join(__dirname,"client","Admin")))
+    res.sendFile(path.resolve(__dirname,"client","Admin","login.html"))
 })
 // app.get("/admin/dashboard",(req,res)=>{
 //     app.use(express.static(path.join(__dirname,"client","dist","Admin")))
