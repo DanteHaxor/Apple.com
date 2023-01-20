@@ -16,13 +16,10 @@ app.get("/admin",(req,res)=>{
     app.use(express.static(path.join(__dirname,"client","Admin")))
     res.sendFile(path.resolve(__dirname,"client","Admin","login.html"))
 })
-// app.get("/admin/dashboard",(req,res)=>{
-//     app.use(express.static(path.join(__dirname,"client","dist","Admin")))
-//     res.sendFile(path.resolve(__dirname,"client","dist","Admin","dashboard.html"))
-// })
 app.get("/api",(req,res)=>{
     res.send({"msg":"welcome"})
 })
+app.use("/admin",require("./routes/admin.route"))
 app.use("/api/user",require("./routes/user.route"))
 app.listen(process.env.PORT,async ()=>{
     try {
