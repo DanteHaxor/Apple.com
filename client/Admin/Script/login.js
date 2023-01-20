@@ -5,7 +5,7 @@ login_btn.addEventListener("submit", (event) => {
 	let password = document.querySelector("#pass").value;
 	if (username === "admin" && password === "admin123") {
 		swal("", "Welcome Admin!", "success");
-		window.location.href = "/Admin/dashboard.html";
+		window.location.href = "../dashboard.html";
 	} else {
 		swal("","Wrong Credentials!","warning");
 	}
