@@ -23,7 +23,7 @@ app.get("/signin",(req,res)=>{
     app.use(express.static(path.join(__dirname,"client","dist")))
     res.sendFile(path.resolve(__dirname,"client","dist","signin.html"))
 })
-app.use("/admin",require("./routes/admin.route"))
+app.use("/api/admin",require("./routes/admin.route"))
 app.use("/api/user",require("./routes/user.route"))
 app.listen(process.env.PORT,async ()=>{
     try {
