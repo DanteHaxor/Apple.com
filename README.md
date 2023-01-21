@@ -66,22 +66,22 @@ To run this project, you will need to add the following environment variables to
 #### User Register
 
 ```http
-  GET /api/user/register
+  POST /api/user/register
 ```
 #### User Login
 
 ```http
-  GET /api/user/login
+  POST /api/user/login
 ```
 #### Admin Register
 
 ```http
-  GET /api/admin/register
+  POST /api/admin/register
 ```
 #### Admin Login
 
 ```http
-  GET /api/admin/login
+  POST /api/admin/login
 ```
 
 ## Screenshots
