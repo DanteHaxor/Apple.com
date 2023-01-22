@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./signup.css">
     <script type="module" crossorigin src="/assets/index-7bcc2fe2.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Signup Page</title>
 </head>
 <body>
@@ -99,6 +100,43 @@
         </div>
         </div>
     </header>
+    <div id="mainc">
+        <h1>Create Your Pear ID</h1>
+        <p>One Alpine ID is all you need to access all Alpine services.
+            You already have an Alpine ID <a href="">Find it here ></a></p>
+    </div>
+    <form action="">
+        <div><input type="text" required id="firstname" placeholder="first name">
+          <input type="text" id="lastname" required placeholder="last name"></div>
+        <br>
+        <label for="">COUNTRY/REGION</label><br>
+        <select name="" id="country">
+          <option value="India">India</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Iraq">Iraq</option>
+          <option value="Ireland">Ireland</option>
+          <option value="Isle of Man">Isle of Man</option>
+          <option value="Israel">Israel</option>
+          <option value="Italy">Italy</option>
+          <option value="Jamaica">Jamaica</option>
+          <option value="Japan">Japan</option>
+          <option value="Jersey">Jersey</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Kazakhstan">Kazakhstan</option>
+          <option value="Kenya">Kenya</option>
+        </select>
+        <br>
+        <div id="dob_div">
+          <label for="">Date of Birth</label>
+          <input id="dob" type="date">
+        </div>
+        <hr>
+        <input type="email" required id="email" placeholder="name@example.com">
+        <p id="pearID">This will be your new Alpine ID.</p>
+        <input type="password" required id="password" placeholder="password">
+        <input type="password" required id="cpassword" placeholder="confirm password">
+        <input type="submit" value="Continue" id="submit">
+      </form>
     <footer class="background-footer">
         <section class="limited-area text-footer">
             <p>1. You must have an Apple Watch. For new subscribers only. BRL 29.90 per month after the trial period.
@@ -395,5 +433,6 @@
         </div>
     </footer>
     <script type="module" src="../src/index.js"></script>
+    <script src="./signup.js"></script>
 </body>
 </html>
