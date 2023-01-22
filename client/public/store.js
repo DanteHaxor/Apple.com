@@ -30,7 +30,8 @@ async function addtocart(id){
     let post=await fetch("https://pear-z5ta.onrender.com/api/cart/addtocart",{
         method: "POST",
         headers:{
-            "content-type": "application/json"
+            "content-type": "application/json",
+            "authorization":"token"
         },
         body: JSON.stringify(data[0])
     })
@@ -38,3 +39,5 @@ async function addtocart(id){
         swal("",`${data[0].title} added to cart`,"success")
     }
 }
+console.log(document.cookie.token);
+console.log(document.cookie);
