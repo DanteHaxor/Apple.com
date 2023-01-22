@@ -1,6 +1,8 @@
 const express = require('express');
 const cartRouter=express.Router()
 const Cartmodel=require("../models/cart.model")
+const auth=require("../middleware/auth.middleware")
+cartRouter.use(auth)
 cartRouter.get("/",async (req,res)=>{
     try {
        let data= await Cartmodel.find({userID:req.body.userID})
@@ -10,7 +12,7 @@ cartRouter.get("/",async (req,res)=>{
         res.send({error: error.message})
     }
 })
-cartRouter.post("/",async (req,res)=>{
+cartRouter.post("/addtocart",async (req,res)=>{
     let {title,image,price,userID}=req.body
     try {
         let rdata=Cartmodel({title,image,price,userID})
@@ -21,7 +23,7 @@ cartRouter.post("/",async (req,res)=>{
         res.send({error: error.message})
     }
 })
-cartRouter.delete("/:id",async (req,res)=>{
+cartRouter.delete("/delete/:id",async (req,res)=>{
     let id = req.params.id
     try {
         let data=Cartmodel.find({userID})
