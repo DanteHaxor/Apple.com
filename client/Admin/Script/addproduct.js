@@ -1,14 +1,12 @@
 var addbtn=document.querySelector("#add-btn")
 addbtn.addEventListener("click",()=>{
     var image=document.getElementById("pro-img").value
-    var type=document.getElementById("pro-name").value
-    var MRP=document.getElementById("pro-price").value
-    var stock=document.getElementById("stock").value
+    var title=document.getElementById("pro-name").value
+    var price=document.getElementById("pro-price").value
     var obj={
-        "MRP":MRP,
-        "type":type,
-        "image":image,
-        "stock":stock
+        title,
+        image,
+        price
     }
     if(obj.MRP=="" || obj.type=="" || obj.image=="" || obj.stock==""){
         swal("","Something is missing!","warning")
@@ -18,15 +16,14 @@ addbtn.addEventListener("click",()=>{
 })
 
 async function postdata(obj){
-    
-        let res=await fetch("https://639b037e31877e43d67f1598.mockapi.io/crud",{
+        let res=await fetch("https://pear-z5ta.onrender.com/api/products/addproduct",{
         method:"POST",
         headers:{
             "content-type":"application/json"
         },
         body:JSON.stringify(obj)
     })
-    swal("",`${obj.type} has been added sucessfully`,"success")
+    swal("",`${obj.title} has been added sucessfully`,"success")
     window.location.reload()
     }
     

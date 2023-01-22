@@ -15,7 +15,7 @@ themetoggler.addEventListener("click",()=>{
 })
 
 async function getdata(){
-    let res=await fetch("https://639b1b94d5141501974b716f.mockapi.io/AddCart?page=1&limit=10")
+    let res=await fetch("https://pear-z5ta.onrender.com/api/products/")
     let data=await res.json()
     displaydata(data)
 }
@@ -25,7 +25,7 @@ function displaydata(data){
         let tr=document.createElement("tr")
         let trcontent=`
             <td>${el.title}</td>
-            <td>${el.id}</td>
+            <td>${el._id}</td>
             <td>${el.price}</td>
             <td class="success">Available</td>
             <td class="danger">details</td>                
