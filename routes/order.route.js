@@ -1,6 +1,9 @@
 const express = require('express');
 const orderRouter=express.Router()
 const Ordermodel=require("../models/order.model")
+const auth=require("../middleware/auth.middleware")
+const adminauth=require("../middleware/adminauth.middleware")
+orderRouter.use(auth)
 orderRouter.get("/",async (req,res)=>{
     try {
         let data=await Ordermodel.find({userID:req.body.userID})
@@ -10,7 +13,7 @@ orderRouter.get("/",async (req,res)=>{
         res.send({error: error.message})
     }
 })
-orderRouter.post("/",async (req,res)=>{
+orderRouter.post("/addorder",async (req,res)=>{
     let {title,image,price,userID}=req.body
     try {
         let rdata=Ordermodel({title,image,price,userID,status:"processing"})
@@ -21,7 +24,8 @@ orderRouter.post("/",async (req,res)=>{
         res.send({error: error.message})
     }
 })
-orderRouter.patch("/:id",async (req,res)=>{
+orderRouter.use(adminauth)
+orderRouter.patch("/update/:id",async (req,res)=>{
     let id = req.params.id
     let data=req.body
     try {
@@ -32,7 +36,7 @@ orderRouter.patch("/:id",async (req,res)=>{
         res.send({error: error.message})
     }
 })
-orderRouter.delete("/:id",async (req,res)=>{
+orderRouter.delete("/delete/:id",async (req,res)=>{
     let id = req.params.id
     try {
         await Ordermodel.findByIdAndDelete(id)

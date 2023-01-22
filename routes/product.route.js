@@ -1,6 +1,7 @@
 const express = require('express');
 const productRouter=express.Router()
 const Productmodel=require("../models/product.model")
+const adminauth=require("../middleware/adminauth.middleware")
 productRouter.get("/",async (req,res)=>{
     try {
     let data=await Productmodel.find()
@@ -9,9 +10,9 @@ productRouter.get("/",async (req,res)=>{
     console.log(error);
     res.send({error: error.message})
     }
-    
 })
-productRouter.post("/",async (req,res)=>{
+productRouter.use(adminauth)
+productRouter.post("/addproduct",async (req,res)=>{
     let {title,image,price}=req.body
     try {
     let rdata=Productmodel({title,image,price})
@@ -23,7 +24,7 @@ productRouter.post("/",async (req,res)=>{
     }
     
 })
-productRouter.patch("/:id",async (req,res)=>{
+productRouter.patch("/update/:id",async (req,res)=>{
     let id = req.params.id
     let data=req.body
     try {
@@ -34,7 +35,7 @@ productRouter.patch("/:id",async (req,res)=>{
         res.send({error: error.message})
     }
 })
-productRouter.delete("/:id",async (req,res)=>{
+productRouter.delete("/delete/:id",async (req,res)=>{
     let id = req.params.id
     try {
         await Productmodel.findByIdAndDelete(id)
