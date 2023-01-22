@@ -27,17 +27,17 @@ for(item of ele){
 async function addtocart(id){
     let res=await fetch(`https://pear-z5ta.onrender.com/api/products?_id=${id}`)
     let data=await res.json()
+    let token=document.cookie
     let post=await fetch("https://pear-z5ta.onrender.com/api/cart/addtocart",{
         method: "POST",
         headers:{
             "content-type": "application/json",
-            "authorization":"token"
+            "authorization":`${token}`
         },
         body: JSON.stringify(data[0])
     })
+    console.log(token);
     if(post.ok){
         swal("",`${data[0].title} added to cart`,"success")
     }
 }
-console.log(document.cookie.token);
-console.log(document.cookie);
