@@ -3,8 +3,9 @@ const productRouter=express.Router()
 const Productmodel=require("../models/product.model")
 const adminauth=require("../middleware/adminauth.middleware")
 productRouter.get("/",async (req,res)=>{
+    let query=req.query
     try {
-    let data=await Productmodel.find()
+    let data=await Productmodel.find(query)
     res.send(data)
     } catch (error) {
     console.log(error);

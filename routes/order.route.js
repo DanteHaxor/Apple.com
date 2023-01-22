@@ -3,6 +3,7 @@ const orderRouter=express.Router()
 const Ordermodel=require("../models/order.model")
 const auth=require("../middleware/auth.middleware")
 const adminauth=require("../middleware/adminauth.middleware")
+
 orderRouter.use(auth)
 orderRouter.get("/",async (req,res)=>{
     try {

@@ -8,7 +8,6 @@ loginbtn.addEventListener("click",(e)=>{
         password
     }
     auth(obj)
-	console.log(obj);
 })
 async function auth(obj){
 	let res=await fetch("https://pear-z5ta.onrender.com/api/user/login",{

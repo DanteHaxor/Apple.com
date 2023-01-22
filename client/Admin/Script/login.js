@@ -9,11 +9,6 @@ login_btn.addEventListener("submit", (event) => {
 	}
 	console.log(obj);
 	auth(obj)
-	// if (username === "admin" && password === "admin123") {
-	// 	
-	// } else {
-	// 	
-	// }
 });
 
 async function auth(obj){
