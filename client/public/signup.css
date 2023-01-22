@@ -1371,3 +1371,108 @@ html {
       left: 0;
     }
   }
+  #mainc{
+    text-align: center;
+    width: 30%;
+    margin: 5% auto;
+  }
+  form{
+    width: 32%;
+    margin: auto;
+}
+input,#country{
+    height: 56px;
+    width: 213px;
+    margin-top: 8px;
+    border-radius: 4px;
+    border: 0.5px solid #cccbcb;
+    font-size: 16px;
+    padding-left: 15px;
+}
+#name{
+    display: flex;
+    justify-content: space-evenly;
+}
+#firstname{
+  width: 220px;
+}
+#lastname{
+  width: 229px;
+}
+#country{
+    width: 100%;
+}
+label{
+    font-size: 18px;
+    color: #666666;
+}
+#dob_div,#email{
+    margin: 15px 0px 25px 0px;
+}
+#dob{
+  width: 475px;
+}
+#email,#password,#cpassword{
+    margin: 25px 0px 25px 0px;
+    width:96%;  
+}
+#pearID{
+    margin-top: -5%;
+    font-size: 15px;
+    color: #5d5c5c;
+}
+#select_number{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    height: 60px;
+    font-size: 16px;
+}
+#cpassword{
+    margin-top: -10px;
+}
+input[type="radio"],input[type="checkbox"]{
+    height: 13px;
+}
+input[type="radio"]{
+    margin-bottom: 15px;
+}
+#verify{
+    display: flex;
+    justify-content: space-evenly;
+}
+.grey_P{
+color: #525151;
+}
+.checkbox{
+    display: flex;
+    justify-content:left;
+    margin-left: -20%;
+}
+.margin_bott{
+    margin-bottom: 25px;
+}
+.bott_mar{
+    margin-left: -15%;
+}
+#hand_shake{
+    margin-top: 20px;
+}
+.center_handshake_icon{
+margin-left: 40%;
+font-size: 30px;
+color:#0070c9 ;
+}
+#submit{
+    margin-left: 30%;
+    background-color:#0070c9 ;
+    color: #ffffff;
+    margin-top: 20px;
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    margin-bottom: 120px;
+}
+#submit:hover{
+    background-color:#177acb;
+    
+}
