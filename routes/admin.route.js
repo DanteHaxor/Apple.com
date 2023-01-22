@@ -18,10 +18,11 @@ adminRouter.post("/register",(req,res)=>{
 })
 adminRouter.post("/login",async (req,res)=>{
     let {username,password}= req.body
-    let data=await Adminmodel.findOne({username})
-    bcrypt.compare(password, data.password, function(err, result) {
+    let data=await Adminmodel.find({username})
+    bcrypt.compare(password, data[0].password, function(err, result) {
         if(result){
             var token = jwt.sign({ userID : data._id }, process.env.key)
+            res.cookie("token", token)
             res.send({"msg":"login success","token":token})
         }else{
             console.log(err);
