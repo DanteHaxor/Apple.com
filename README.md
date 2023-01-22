@@ -83,6 +83,26 @@ To run this project, you will need to add the following environment variables to
 ```http
   POST /api/admin/login
 ```
+#### All Products
+
+```http
+  GET /api/products/
+```
+#### Add Products
+
+```http
+  POST /api/products/addproduct
+```
+#### Update Products
+
+```http
+  PATCH /api/products/update/:id
+```
+#### Delete Products
+
+```http
+  DELETE /api/products/delete/:id
+```
 
 ## Screenshots
 
