@@ -292,7 +292,7 @@ html {
   #lform h2{
     color: rgb(73,73,73);
   }
-  #lform input{
+  #lform input:nth-child(2){
     width: 300px;
     height: 40px;
     border-radius: 4px;
@@ -301,6 +301,25 @@ html {
     padding-left: 15px;
     font-weight: lighter;;
   }
+  #lform input:nth-child(3){
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgb(73,73,73);
+    font-size: 20px;
+    padding-left: 15px;
+    font-weight: lighter;;
+  }
+  #lform input:nth-child(4){
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgb(73,73,73);
+    font-size: 20px;
+    padding-left: 15px;
+    font-weight: lighter;
+  }
+
   #lform input:focus{
     border: none;
   }
@@ -1709,4 +1728,10 @@ html {
   }
   footer{
     margin-top: 10%;
+  }
+  #email{
+    margin-bottom: 2%;
+  }
+  #pass{
+    margin-bottom: 2%;
   }

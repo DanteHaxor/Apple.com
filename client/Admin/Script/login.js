@@ -26,10 +26,7 @@ async function auth(obj){
 	})
 	if(res.ok){
 		swal("", "Welcome Admin!", "success");
-		let data=await res.json();
-		let token=data.token
-		console.log(token);
-		// window.location.href = "../dashboard.html";
+		window.location.href = "../dashboard.html";
 	}else{
 		swal("","Wrong Credentials!","warning");
 	}

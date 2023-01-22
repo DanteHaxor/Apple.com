@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <link rel="stylesheet" href="./signin.css">
     <script type="module" crossorigin src="/assets/index-7bcc2fe2.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Sign In - Secure Checkout - Pear</title>
 </head>
 <body>
@@ -29,7 +30,7 @@
                                         src="./pear.svg">
                                 </li>
                             </a>
-                            <a href="./signin.html">
+                            <a href="./store.html">
                                 <li>Store</li>
                             </a>
                             <a href="#">
@@ -106,6 +107,8 @@
     <div id="lform">
         <h2>Sign in to Pear Store</h2>
         <input type="email" id="email" placeholder="Pear ID"/>
+        <input type="password" id="pass" placeholder="Pear Password"/>
+        <input type="button" value="Login" id="lbtn">
     </div>
     <div id="remember_me">
         <input type="checkbox"><b class="gray">Remember me</b>
@@ -412,6 +415,6 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="../src/index.js"></script>
+    <script type="module" src="../src/login.js"></script>
 </body>
 </html>
