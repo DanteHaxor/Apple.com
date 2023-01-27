@@ -34,10 +34,11 @@ async function addtocart(id){
         price
     }
     let token=document.cookie.split("=")[1]
+    console.log(token);
     let post=await fetch("https://pear-z5ta.onrender.com/api/cart/addtocart",{
         method: "POST",
         headers:{
-            "content-type": "application/json",
+            "Content-Type": "application/json",
             "authorization":`${token}`
         },
         body: JSON.stringify(obj)

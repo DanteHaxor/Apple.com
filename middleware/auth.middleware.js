@@ -7,7 +7,7 @@ const auth=(req,res,next)=>{
             console.log(err);
             res.status(404).send({ message: "please login first!" })
         }else{
-                req.body.userID= decoded.userID;
+                req.body.userID = decoded.userID;
                 next()
         }
       })
