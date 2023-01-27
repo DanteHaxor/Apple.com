@@ -40,7 +40,13 @@ if(token){
     document.getElementById("ltoggle").innerText="Sign in"
 }
 async function getOrders(){
-    let res=await fetch("https://pear-z5ta.onrender.com/api/cart/")
+    let res=await fetch("https://pear-z5ta.onrender.com/api/cart/",{
+        method:"GET",
+        headers:{
+            "content-type": "application/json",
+            "authorization": `${token}`
+        }
+    })
     let data=await res.json()
     displayorders(data)
 }

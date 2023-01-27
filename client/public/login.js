@@ -33,8 +33,17 @@ if(token){
 const displayName=document.cookie.split("=")[0]
 console.log(displayName);
 document.getElementById("dname").innerText=displayName||"Account";
+
+
+
 async function getOrders(){
-    let res=await fetch("https://pear-z5ta.onrender.com/api/cart/")
+    let res=await fetch("https://pear-z5ta.onrender.com/api/cart/",{
+        method:"GET",
+        headers:{
+            "content-type": "application/json",
+            "authorization": `${token}`
+        }
+    })
     let data=await res.json()
     displayorders(data)
 }
