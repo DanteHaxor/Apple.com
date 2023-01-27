@@ -27,7 +27,7 @@ for(item of ele){
 async function addtocart(id){
     let res=await fetch(`https://pear-z5ta.onrender.com/api/products?_id=${id}`)
     let data=await res.json()
-    let token=document.cookie
+    let token=document.cookie.split("=")[1]
     let post=await fetch("https://pear-z5ta.onrender.com/api/cart/addtocart",{
         method: "POST",
         headers:{
@@ -41,4 +41,3 @@ async function addtocart(id){
         swal("",`${data[0].title} added to cart`,"success")
     }
 }
-console.log(document.cookie.split("="))
