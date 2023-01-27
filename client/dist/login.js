@@ -9,6 +9,7 @@ loginbtn.addEventListener("click",(e)=>{
     }
     auth(obj)
 })
+let token=document.cookie.split("=")[1]
 async function auth(obj){
 	let res=await fetch("https://pear-z5ta.onrender.com/api/user/login",{
 		method: "POST",
@@ -24,6 +25,11 @@ async function auth(obj){
 		swal("","Wrong Credentials!","warning");
 	}
 }
-// const displayName=document.cookie.split("=")[1]
-// console.log(displayName);
-// document.getElementById("dname").innerText=displayName||"Sign in";
+if(token){
+    document.getElementById("ltoggle").innerText="Sign Out"
+}else{
+    document.getElementById("ltoggle").innerText="Sign in"
+}
+const displayName=document.cookie.split("=")[0]
+console.log(displayName);
+document.getElementById("dname").innerText=displayName||"Account";

@@ -24,6 +24,7 @@ for(item of ele){
 }
 }
 
+let token=document.cookie.split("=")[1]
 async function addtocart(id){
     let res=await fetch(`https://pear-z5ta.onrender.com/api/products?_id=${id}`)
     let data=await res.json()
@@ -33,8 +34,6 @@ async function addtocart(id){
         image,
         price
     }
-    let token=document.cookie.split("=")[1]
-    console.log(token);
     let post=await fetch("https://pear-z5ta.onrender.com/api/cart/addtocart",{
         method: "POST",
         headers:{
@@ -48,6 +47,11 @@ async function addtocart(id){
         swal("",`${data[0].title} added to cart`,"success")
     }
 }
-// const displayName=document.cookie.split("=")[1]
-// console.log(displayName);
-// document.getElementById("dname").innerText=displayName||"Sign in";
+if(token){
+    document.getElementById("ltoggle").innerText="Sign Out"
+}else{
+    document.getElementById("ltoggle").innerText="Sign in"
+}
+const displayName=document.cookie.split("=")[0]
+console.log(displayName);
+document.getElementById("dname").innerText=displayName||"Account";

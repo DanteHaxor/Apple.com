@@ -17,6 +17,7 @@ submitbtn.addEventListener("click",(e)=>{
     }
     register(obj)
 })
+let token=document.cookie.split("=")[1]
 async function register(obj){
     let res=await fetch("https://pear-z5ta.onrender.com/api/user/register",{
         method: "POST",
@@ -32,4 +33,9 @@ async function register(obj){
         swal("","Registration Failed!","warning");
     }
 
+}
+if(token){
+    document.getElementById("ltoggle").innerText="Sign Out"
+}else{
+    document.getElementById("ltoggle").innerText="Sign in"
 }

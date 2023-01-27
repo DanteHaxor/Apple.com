@@ -35,3 +35,12 @@ removebag.addEventListener('click', () => {
     bag.classList.remove('bag-active');
     setabag.classList.remove('seta-active');
 })
+let token=document.cookie.split("=")[1]
+if(token){
+    document.getElementById("ltoggle").innerText="Sign Out"
+}else{
+    document.getElementById("ltoggle").innerText="Sign in"
+}
+const displayName=document.cookie.split("=")[0]
+console.log(displayName);
+document.getElementById("dname").innerText=displayName||"Account";
