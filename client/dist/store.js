@@ -36,8 +36,9 @@ async function addtocart(id){
         },
         body: JSON.stringify(data[0])
     })
-    console.log(token);
+    
     if(post.ok){
         swal("",`${data[0].title} added to cart`,"success")
     }
 }
+console.log(document.cookie.split("="))
