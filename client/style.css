@@ -1371,3 +1371,15 @@ main {
     left: 0;
   }
 }
+.bag-pro{
+  display: flex;
+  text-align: center;
+}
+.bag-pro img{
+  width: 55%;
+}
+.bag-pro div{
+  margin-top: 5%;
+  height: 50%;
+  text-align: center;
+}

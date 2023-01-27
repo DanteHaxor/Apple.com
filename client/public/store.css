@@ -845,7 +845,15 @@ html {
     .ipad {
       height: 650px;
     }
-  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+    .grid-full{
+      display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
     .iphone-14 h2,
     .ipad h2 {
       font-size: 45px;
@@ -912,12 +920,30 @@ html {
       width: 160px;
     }
   }
-  
+  @media (min-width: 768px){
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+    .grid-full{
+      display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
   @media (max-width: 833px) {
     .limited-area {
       width: 100%;
     }
-  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+    .grid-full{
+      display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
     header {
       flex-direction: column;
     }
@@ -1325,16 +1351,43 @@ html {
     .ipad-pro .link-product-buy {
       margin-left: 5%;
     }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+    .grid-full{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+   
+  }
+  @media (max-width: 500px){
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-full{
+      display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
   }
   
   @media (max-width: 368px) {
     .title-macbook {
       margin: 0;
     }
-  
     .macbook h2 {
       text-align: center;
       font-size: 27px;
+    }
+     .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-full{
+      display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
   }
   
@@ -1342,7 +1395,7 @@ html {
     .ipad-pro .link-product-buy {
       margin-left: 2%;
     }
-  
+    
     .ipad-pro .link-product a {
       font-size: 14px;
     }
@@ -1362,6 +1415,14 @@ html {
     .macbook img {
       width: 80%;
     }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  .grid-full{
+    display: grid;
+      grid-template-columns: repeat(1, 1fr);
+  }
   }
   
   @media (max-width: 270px) {
@@ -1417,7 +1478,7 @@ html {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
   grid-gap: 15px;
 }
 .grid-product {
