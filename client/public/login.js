@@ -25,4 +25,6 @@ async function auth(obj){
 		swal("","Wrong Credentials!","warning");
 	}
 }
-
+const displayName=document.cookie.split("=")[1]
+console.log(displayName);
+document.getElementById("dname").innerText=displayName||"Sign in";

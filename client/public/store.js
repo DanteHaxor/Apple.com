@@ -48,3 +48,6 @@ async function addtocart(id){
         swal("",`${data[0].title} added to cart`,"success")
     }
 }
+const displayName=document.cookie.split("=")[1]
+console.log(displayName);
+document.getElementById("dname").innerText=displayName||"Sign in";

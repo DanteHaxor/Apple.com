@@ -23,7 +23,7 @@ userRouter.post("/login",async (req,res)=>{
         if(result){
             var token = jwt.sign({ userID : data._id }, process.env.key)
             res.cookie("token", token)
-            res.send({"msg":"login success","token":token})
+            res.cookie("name",`${data.firstname} ${data.lastname}`)
         }else{
             console.log(err);
             res.send("wrong credentials")
