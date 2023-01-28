@@ -14,17 +14,20 @@ addbtn.addEventListener("click",()=>{
     postdata(obj)
     }
 })
-
+let token=document.cookie.split("=")[1]
 async function postdata(obj){
         let res=await fetch("https://pear-z5ta.onrender.com/api/products/addproduct",{
         method:"POST",
         headers:{
-            "content-type":"application/json"
+            "content-type":"application/json",
+            "authorization":`${token}`
         },
         body:JSON.stringify(obj)
     })
-    swal("",`${obj.title} has been added sucessfully`,"success")
-    window.location.reload()
+    if(res.ok){
+        swal("",`${obj.title} has been added sucessfully`,"success")
+        window.location.reload()
+    }
     }
     
 

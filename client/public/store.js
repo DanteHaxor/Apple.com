@@ -45,6 +45,7 @@ async function addtocart(id){
     
     if(post.ok){
         swal("",`${data[0].title} added to cart`,"success")
+        window.location.reload()
     }
 }
 if(token){
@@ -70,7 +71,6 @@ async function getOrders(){
 }
 getOrders()
 function displayorders(data){
-    if(data){
         let newdata=data.map((el)=>{
             return `<div class="bag-pro">
             <img src="${el.image}" alt="">
@@ -79,11 +79,9 @@ function displayorders(data){
             </div>
         </div>`
         })
-        document.getElementById("bitem").innerHTML = newdata.join("")
-        document.getElementById("bagbtn").innerHTML = `<button>Checkout</button>`
+        document.getElementById("bitem").innerHTML = newdata.join("") || `<p>Your bag is empty</p>`
+        if(data){
+        document.getElementById("bagbtn").innerHTML = `<button id=submit>Checkout</button>`
         document.getElementById("bspan").innerText = `(${data.length})`
-    }
-   else{
-    document.getElementById("bagbtn").innerText= "Your bag is empty"
-   }
+        }
 }

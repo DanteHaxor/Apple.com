@@ -1551,3 +1551,11 @@ html {
   height: 50%;
   text-align: center;
 }
+#submit{
+  background-color:#0070c9 ;
+  color: #ffffff;
+  cursor: pointer;
+}
+#submit:hover{
+  background-color:#177acb;
+}

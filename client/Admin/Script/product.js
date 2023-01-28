@@ -35,10 +35,14 @@ async function getalldata(){
 	let data = await res.json();
     displaydata(data)
 }
-
+let token=document.cookie.split("=")[1]
 async function deletedata(id){
     let res=await fetch(`https://pear-z5ta.onrender.com/api/products/delete/${id}`,{
-        method:"DELETE"
+        method:"DELETE",
+        headers: {
+            "content-type": "application/json",
+            "authorization":`${token}`
+        }
     })
     swal({
   title: "Are you sure?",
