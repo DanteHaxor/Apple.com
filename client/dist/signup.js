@@ -52,20 +52,17 @@ async function getOrders(){
 }
 getOrders()
 function displayorders(data){
-    if(data){
-        let newdata=data.map((el)=>{
-            return `<div class="bag-pro">
-            <img src="${el.image}" alt="">
-            <div>
-                <h4>${el.title} <br> $${el.price}</h4>     
-            </div>
-        </div>`
-        })
-        document.getElementById("bitem").innerHTML = newdata.join("")
-        document.getElementById("bagbtn").innerHTML = `<button>Checkout</button>`
-        document.getElementById("bspan").innerText = `(${data.length})`
+    let newdata=data.map((el)=>{
+        return `<div class="bag-pro">
+        <img src="${el.image}" alt="">
+        <div>
+            <h4>${el.title} <br> $${el.price}</h4>     
+        </div>
+    </div>`
+    })
+    document.getElementById("bitem").innerHTML = newdata.join("") || `<p>Your bag is empty</p>`
+    if(newdata){
+    document.getElementById("bagbtn").innerHTML = `<button id=submit>Checkout</button>`
+    document.getElementById("bspan").innerText = `(${data.length})`
     }
-   else{
-    document.getElementById("bagbtn").innerText= "Your bag is empty"
-   }
 }

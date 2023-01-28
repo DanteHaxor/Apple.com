@@ -80,7 +80,7 @@ function displayorders(data){
         </div>`
         })
         document.getElementById("bitem").innerHTML = newdata.join("") || `<p>Your bag is empty</p>`
-        if(data){
+        if(newdata){
         document.getElementById("bagbtn").innerHTML = `<button id=submit>Checkout</button>`
         document.getElementById("bspan").innerText = `(${data.length})`
         }

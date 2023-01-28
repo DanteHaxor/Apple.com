@@ -1463,14 +1463,15 @@ font-size: 30px;
 color:#0070c9 ;
 }
 #submit{
-    margin-left: 30%;
-    background-color:#0070c9 ;
-    color: #ffffff;
-    margin-top: 20px;
-    width: 150px;
-    height: 45px;
-    cursor: pointer;
-    margin-bottom: 120px;
+  background-color:#0070c9 ;
+  color: #ffffff;
+  cursor: pointer;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 #submit:hover{
     background-color:#177acb;

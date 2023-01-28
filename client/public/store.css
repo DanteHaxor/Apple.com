@@ -1555,6 +1555,12 @@ html {
   background-color:#0070c9 ;
   color: #ffffff;
   cursor: pointer;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 #submit:hover{
   background-color:#177acb;
