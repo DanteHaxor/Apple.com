@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./signup.css">
-    <script type="module" crossorigin src="/assets/index-b76ad31f.js"></script>
+    <script src="./config.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./swal-config.js"></script>
     <title>Signup Page</title>
 </head>
 <body>
@@ -82,13 +83,12 @@
   
                     <div class="bag">
                         <div class="content-bag">
-                            <div id="bitem">
-                                <p>Your bag is empty</p>
+                            <div id="bitem" class="bag-dropdown-preview">
+                                <p class="bag-dropdown-text">Open your bag to review items and check out.</p>
                             </div>
-                            <div id="bagbtn"></div>
                             <div class="links-bag">
                                 <ul>
-                                    <li><a href="#">Bag</a></li>
+                                    <li><a href="./bag.html" id="bag-link">Bag<span id="bspan"></span></a></li>
                                     <li><a href="#">Saved Items</a></li>
                                     <li><a href="#">Orders</a></li>
                                     <li><a href="#" id="dname">Account</a></li>
@@ -103,17 +103,26 @@
         </div>
         </div>
     </header>
-    <div id="mainc">
+    <main class="signup-main">
+    <div id="mainc" class="signup-intro">
         <h1>Create Your Pear ID</h1>
         <p>One Pear ID is all you need to access all Pear services.
-            You already have an Pear ID <a href="">Find it here ></a></p>
+            Already have one? <a href="./signin.html">Find it here &gt;</a></p>
     </div>
-    <form action="">
-        <div><input type="text" required id="firstname" placeholder="first name">
-          <input type="text" id="lastname" required placeholder="last name"></div>
-        <br>
-        <label for="">COUNTRY/REGION</label><br>
-        <select name="" id="country">
+    <form class="signup-form" action="#" novalidate>
+        <div class="form-row form-row--split">
+          <div class="form-field">
+            <label for="firstname">First name</label>
+            <input type="text" required id="firstname" name="firstname" placeholder="First name" autocomplete="given-name">
+          </div>
+          <div class="form-field">
+            <label for="lastname">Last name</label>
+            <input type="text" id="lastname" name="lastname" required placeholder="Last name" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-field">
+        <label for="country">Country / Region</label>
+        <select name="country" id="country">
           <option value="India">India</option>
           <option value="Indonesia">Indonesia</option>
           <option value="Iraq">Iraq</option>
@@ -128,18 +137,28 @@
           <option value="Kazakhstan">Kazakhstan</option>
           <option value="Kenya">Kenya</option>
         </select>
-        <br>
-        <div id="dob_div">
-          <label for="">Date of Birth</label>
-          <input id="dob" type="date">
         </div>
-        <hr>
-        <input type="email" required id="email" placeholder="name@example.com">
-        <p id="pearID">This will be your new Pear ID.</p>
-        <input type="password" required id="password" placeholder="password">
-        <input type="password" required id="cpassword" placeholder="confirm password">
-        <input type="submit" value="Continue" id="submit">
+        <div class="form-field" id="dob_div">
+          <label for="dob">Date of birth</label>
+          <input id="dob" name="dob" type="date" required>
+        </div>
+        <hr class="signup-divider">
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" required id="email" name="email" placeholder="name@example.com" autocomplete="email">
+          <p id="pearID" class="field-hint">This will be your new Pear ID.</p>
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" required id="password" name="password" placeholder="Password" autocomplete="new-password">
+        </div>
+        <div class="form-field">
+          <label for="cpassword">Confirm password</label>
+          <input type="password" required id="cpassword" name="cpassword" placeholder="Confirm password" autocomplete="new-password">
+        </div>
+        <button type="submit" class="signup-submit" id="submit">Continue</button>
       </form>
+    </main>
     <footer class="background-footer">
         <section class="limited-area text-footer">
             <p>1. You must have an Apple Watch. For new subscribers only. BRL 29.90 per month after the trial period.
@@ -435,7 +454,8 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="../src/index.js"></script>
+    <script src="./bag-nav.js"></script>
+    <script src="./cart-count.js"></script>
     <script src="./signup.js"></script>
 </body>
 </html>

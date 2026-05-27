@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./store.css">
-    <script type="module" crossorigin src="/assets/index-b76ad31f.js"></script>
+    <script src="./config.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./swal-config.js"></script>
     <title>Pear Store</title>
 </head>
 <body>
@@ -82,13 +83,12 @@
   
                     <div class="bag">
                         <div class="content-bag">
-                            <div id="bitem">
-                                <p>Your bag is empty</p>
+                            <div id="bitem" class="bag-dropdown-preview">
+                                <p class="bag-dropdown-text">Open your bag to review items and check out.</p>
                             </div>
-                            <div id="bagbtn"></div>
                             <div class="links-bag">
                                 <ul>
-                                    <li><a href="#">Bag<span id="bspan"></span> </a></li>
+                                    <li><a href="./bag.html" id="bag-link">Bag<span id="bspan"></span></a></li>
                                     <li><a href="#">Saved Items</a></li>
                                     <li><a href="#">Orders</a></li>
                                     <li><a href="#" id="dname">Account</a></li>
@@ -536,7 +536,8 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="../src/index.js"></script>
+    <script src="./bag-nav.js"></script>
+    <script src="./cart-count.js"></script>
     <script src="./store.js"></script>
 </body>
 </html>

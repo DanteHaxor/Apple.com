@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <link rel="stylesheet" href="./signin.css">
-    <script type="module" crossorigin src="/assets/index-b76ad31f.js"></script>
+    <script src="./config.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./swal-config.js"></script>
     <title>Sign In - Secure Checkout - Pear</title>
 </head>
 <body>
@@ -83,13 +84,12 @@
   
                     <div class="bag">
                         <div class="content-bag">
-                            <div id="bitem">
-                                <p>Your bag is empty</p>
+                            <div id="bitem" class="bag-dropdown-preview">
+                                <p class="bag-dropdown-text">Open your bag to review items and check out.</p>
                             </div>
-                            <div id="bagbtn"></div>
                             <div class="links-bag">
                                 <ul>
-                                    <li><a href="#">Bag</a></li>
+                                    <li><a href="./bag.html" id="bag-link">Bag<span id="bspan"></span></a></li>
                                     <li><a href="#">Saved Items</a></li>
                                     <li><a href="#">Orders</a></li>
                                     <li><a href="#" id="dname">Account</a></li>
@@ -418,6 +418,8 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="./login.js"></script>
+    <script src="./bag-nav.js"></script>
+    <script src="./cart-count.js"></script>
+    <script src="./login.js"></script>
 </body>
 </html>

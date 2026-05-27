@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+client/node_modules/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Cursor / editor
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs & debug
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+debug-*.log
+
+# Build / cache (uncomment dist if you build on deploy only)
+# client/dist/
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Optional local tooling
+*.local

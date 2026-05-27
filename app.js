@@ -8,16 +8,15 @@ app.use(express.json())
 app.use(cors({
     origin:"*"
 }))
+app.use(express.static(path.join(__dirname,"client","dist")))
 app.get("/",(req,res)=>{
-    app.use(express.static(path.join(__dirname,"client","dist")))
     res.sendFile(path.resolve(__dirname,"client","dist","index.html"))
 })
 app.get("/admin",(req,res)=>{
-    app.use(express.static(path.join(__dirname,"client","Admin")))
     res.sendFile(path.resolve(__dirname,"client","Admin","login.html"))
 })
+app.use("/admin",express.static(path.join(__dirname,"client","Admin")))
 app.get("/signin",(req,res)=>{
-    app.use(express.static(path.join(__dirname,"client","dist")))
     res.sendFile(path.resolve(__dirname,"client","dist","signin.html"))
 })
 app.get("/api",(req,res)=>{

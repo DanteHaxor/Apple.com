@@ -5,9 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/pear.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <script src="/config.js"></script>
     <title>Pear</title>
-    <script type="module" crossorigin src="/assets/index-b76ad31f.js"></script>
-    <link rel="stylesheet" href="/assets/index-b3980560.css">
+    <script type="module" crossorigin src="/assets/index-1170482d.js"></script>
+    <link rel="stylesheet" href="/assets/index-ff2c05d5.css">
   </head>
   <body>
     <header class="header">
@@ -82,13 +83,12 @@
   
                     <div class="bag">
                         <div class="content-bag">
-                            <div id="bitem">
-                                <p>Your bag is empty</p>
+                            <div id="bitem" class="bag-dropdown-preview">
+                                <p class="bag-dropdown-text">Open your bag to review items and check out.</p>
                             </div>
-                            <div id="bagbtn"></div>
                             <div class="links-bag">
                                 <ul>
-                                    <li><a href="#">Bag</a></li>
+                                    <li><a href="./bag.html" id="bag-link">Bag<span id="bspan"></span></a></li>
                                     <li><a href="#">Saved Items</a></li>
                                     <li><a href="#">Orders</a></li>
                                     <li><a href="#" id="dname">Account</a></li>
@@ -496,6 +496,9 @@
             </div>
         </div>
     </footer>
+  <script src="/config.js"></script>
+  <script src="/bag-nav.js"></script>
+  <script src="/cart-count.js"></script>
   
   </body>
 </html>

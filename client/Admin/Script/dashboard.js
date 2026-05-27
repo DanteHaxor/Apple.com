@@ -15,7 +15,7 @@ themetoggler.addEventListener("click",()=>{
 })
 
 async function getdata(){
-    let res=await fetch("https://pear-z5ta.onrender.com/api/products/")
+    let res=await fetch(`${api}/products/`)
     let data=await res.json()
     displaydata(data)
 }

@@ -1,5 +1,5 @@
 async function getdata(){
-    let res=await fetch("https://pear-z5ta.onrender.com/api/products/")
+    let res=await fetch(`${api}/products/`)
     let data=await res.json()
     display(data)
 }
@@ -24,9 +24,14 @@ for(item of ele){
 }
 }
 
-let token=document.cookie.split("=")[1]
 async function addtocart(id){
-    let res=await fetch(`https://pear-z5ta.onrender.com/api/products?_id=${id}`)
+    const token=getAuthToken()
+    if(!token){
+        swal("","Please sign in to add items to your bag.","warning")
+        window.location.href=`${url}/signin`
+        return
+    }
+    let res=await fetch(`${api}/products?_id=${id}`)
     let data=await res.json()
     let {title,image,price}=data[0]
     let obj={
@@ -34,7 +39,7 @@ async function addtocart(id){
         image,
         price
     }
-    let post=await fetch("https://pear-z5ta.onrender.com/api/cart/addtocart",{
+    let post=await fetch(`${api}/cart/addtocart`,{
         method: "POST",
         headers:{
             "Content-Type": "application/json",
@@ -45,43 +50,7 @@ async function addtocart(id){
     
     if(post.ok){
         swal("",`${data[0].title} added to cart`,"success")
-        window.location.reload()
+        if (typeof updateCartCount === "function") await updateCartCount()
+        if (typeof openBag === "function") openBag()
     }
-}
-if(token){
-    document.getElementById("ltoggle").innerText="Sign Out"
-}else{
-    document.getElementById("ltoggle").innerText="Sign in"
-}
-const displayName=document.cookie.split("=")[0]
-console.log(displayName);
-document.getElementById("dname").innerText=displayName||"Account";
-
-
-async function getOrders(){
-    let res=await fetch("https://pear-z5ta.onrender.com/api/cart/",{
-        method:"GET",
-        headers:{
-            "content-type": "application/json",
-            "authorization": `${token}`
-        }
-    })
-    let data=await res.json()
-    displayorders(data)
-}
-getOrders()
-function displayorders(data){
-        let newdata=data.map((el)=>{
-            return `<div class="bag-pro">
-            <img src="${el.image}" alt="">
-            <div>
-                <h4>${el.title} <br> $${el.price}</h4>     
-            </div>
-        </div>`
-        })
-        document.getElementById("bitem").innerHTML = newdata.join("") || `<p>Your bag is empty</p>`
-        if(newdata){
-        document.getElementById("bagbtn").innerHTML = `<button id=submit>Checkout</button>`
-        document.getElementById("bspan").innerText = `(${data.length})`
-        }
 }

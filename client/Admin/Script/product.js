@@ -1,5 +1,5 @@
 async function getData(){
-    let res = await fetch("https://pear-z5ta.onrender.com/api/products");
+    let res = await fetch(`${api}/products`);
 	let data = await res.json();
     displaydata(data)
 }
@@ -37,7 +37,7 @@ async function getalldata(){
 }
 let token=document.cookie.split("=")[1]
 async function deletedata(id){
-    let res=await fetch(`https://pear-z5ta.onrender.com/api/products/delete/${id}`,{
+    let res=await fetch(`${api}/products/delete/${id}`,{
         method:"DELETE",
         headers: {
             "content-type": "application/json",
@@ -62,7 +62,7 @@ async function deletedata(id){
 });
 	setTimeout(() => { 
 	window.location.reload()	
-	}, 3000);
+	}, POPUP_DELAY_MS);
    
 }
 

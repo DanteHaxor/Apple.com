@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./store.css">
+    <link rel="stylesheet" href="./bag.css">
+    <script src="./config.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./swal-config.js"></script>
+    <title>Your Bag - Pear</title>
+</head>
+<body>
+    <header class="header">
+        <div class="limited-area accountin-header">
+            <nav class="nav-header">
+                <div class="menu">
+                    <div class="search-menu">
+                        <input type="text" placeholder="Search in Apple.com">
+                    </div>
+                    <div class="links-menu">
+                        <ul class="ul-search">
+                            <div class="btn-menu">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a class="svg-apple" href="https://pear-z5ta.onrender.com">
+                                <li>
+                                    <img
+                                        src="./pear.svg">
+                                </li>
+                            </a>
+                            <a href="./store.html">
+                                <li>Store</li>
+                            </a>
+                            <a href="#">
+                                <li>Mac</li>
+                            </a>
+                            <a href="#">
+                                <li>iPad</li>
+                            </a>
+                            <a href="#">
+                                <li>iPhone</li>
+                            </a>
+                            <a href="#">
+                                <li>Watch</li>
+                            </a>
+                            <a href="#">
+                                <li>AirPods</li>
+                            </a>
+                            <a href="#">
+                                <li>TV & Home</li>
+                            </a>
+                            <a href="#">
+                                <li>Only on Pear</li>
+                            </a>
+                            <a href="#">
+                                <li>Accessories</li>
+                            </a>
+                            <a class="last-nav-mobile" href="#">
+                                <li>Support</li>
+                            </a>
+                            <a class="svg-search" href="#">
+                                <li class="search">
+                                    <img class="svg-search"
+                                        src="https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_search_image__cbllq1gkias2_large.svg">
+                                </li>
+                            </a>
+                            <a class="svg-bag">
+                                <li>
+  
+                                    <img
+                                        src="https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg">
+                                </li>
+                                <div class="seta-bag">
+                                    <span></span>
+                                </div>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accountiner-bag">
+  
+                    <div class="bag">
+                        <div class="content-bag">
+                            <div id="bitem" class="bag-dropdown-preview">
+                                <p class="bag-dropdown-text">Open your bag to review items and check out.</p>
+                            </div>
+                            <div class="links-bag">
+                                <ul>
+                                    <li><a href="./bag.html" id="bag-link">Bag<span id="bspan"></span></a></li>
+                                    <li><a href="#">Saved Items</a></li>
+                                    <li><a href="#">Orders</a></li>
+                                    <li><a href="#" id="dname">Account</a></li>
+                                    <li><a href="https://pear-z5ta.onrender.com/signin" id="ltoggle">Sign in</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="remove-bag"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        </div>
+    </header>
+    <main class="bag-page-main">
+      <section class="bag-page limited-area">
+        <h1>Your Bag</h1>
+        <p class="bag-page-subtitle">Review items, adjust quantities, or check out.</p>
+        <div id="cart-empty" class="bag-empty hidden">
+          <p>Your bag is empty.</p>
+          <a class="bag-shop-link" href="./store.html">Continue shopping</a>
+        </div>
+        <div id="cart-list" class="cart-list"></div>
+        <aside id="cart-summary" class="cart-summary hidden">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0</span>
+          </div>
+          <button type="button" id="checkout-btn" class="checkout-btn">Check Out</button>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="background-footer">
+        <section class="limited-area text-footer">
+            <p>1. You must have an Apple Watch. For new subscribers only. BRL 29.90 per month after the trial period.
+              THE
+              Subscription automatically renews until cancelled. Apple subscription required
+              Fitness+. Apple Fitness+ requires iOS 14.3 or later, watch-series-8OS 14.3 or later, watchOS 7.2
+              or
+              posterior
+              and tvOS 14.3 or later. To access the newest features, your devices must have the latest version.
+              more
+              software recent.</p>
+            <p>Apple Fitness+ classes are in English with the option of subtitles in Brazilian Portuguese, French,
+              Spanish,
+              German, Italian and Russian.</p>
+            <p>$9.90 per month after the free trial period. Only one offer per Apple ID and one offer per family
+              if
+              you are part of a Family Sharing group, regardless of the number of devices that
+              you
+              or your family buy. Offer is not available to those who have already accepted the one-year offer
+              free
+              from Apple TV+. Offer valid for three months from the date of activation of the qualifying device. THE
+              Subscription automatically renews until cancelled. Other terms and restrictions apply.</p>
+        </section>
+        <nav class="limited-area nav-footer">
+            <div class="boxes-nav-footer">
+                <div class="accordion">
+                    <input id="discover_buy" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="discover_buy">
+                        <h3>Discover and buy</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>Store</li>
+                            </a>
+                            <a href="#">
+                                <li>Mac</li>
+                            </a>
+                            <a href="#">
+                                <li>iPad</li>
+                            </a>
+                            <a href="#">
+                                <li>iPhone</li>
+                            </a>
+                            <a href="#">
+                                <li>Watch</li>
+                            </a>
+                            <a href="#">
+                                <li>AirPods</li>
+                            </a>
+                            <a href="#">
+                                <li>TV & Casa</li>
+                            </a>
+                            <a href="#">
+                                <li>AirTag</li>
+                            </a>
+                            <a href="#">
+                                <li>Accessories</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="boxes-nav-footer">
+                <div class="accordion">
+                    <input id="services" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="services">
+                        <h3>Services</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>Apple Music</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple TV+</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple Fitness+</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple Arcade</li>
+                            </a>
+                            <a href="#">
+                                <li>iCloud</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple One</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple Pay</li>
+                            </a>
+                            <a href="#">
+                                <li>Books</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple Podcasts</li>
+                            </a>
+                            <a href="#">
+                                <li>App Store</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <input id="account" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="account">
+                        <h3>Your account</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>Manage your Apple ID</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple Store account</li>
+                            </a>
+                            <a href="#">
+                                <li>iCloud.com</li>
+                            </a>
+                        </ul>
+                    </div>
+  
+                </div>
+            </div>
+            <div class="boxes-nav-footer">
+                <div class="accordion">
+                    <input id="apple_store" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="apple_store">
+                        <h3>Apple Store</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>find a store</li>
+                            </a>
+                            <a href="#">
+                                <li>Genius Bar</li>
+                            </a>
+                            <a href="#">
+                                <li>Today at Apple</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple Camp</li>
+                            </a>
+                            <a href="#">
+                                <li>App Apple Store</li>
+                            </a>
+                            <a href="#">
+                                <li>Financing</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple Recycle Program</li>
+                            </a>
+                            <a href="#">
+                                <li>Status of your order</li>
+                            </a>
+                            <a href="#">
+                                <li>Help to buy</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="boxes-nav-footer">
+                <div class="accordion">
+                    <input id="companies" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="companies">
+                        <h3>For companies</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>Apple and business</li>
+                            </a>
+                            <a href="#">
+                                <li>Buy for your company</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <input id="education" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="education">
+                        <h3>For education</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>Apple and Education</li>
+                            </a>
+                            <a href="#">
+                                <li>Buy for Basic Education</li>
+                            </a>
+                            <a href="#">
+                                <li>Buy for college</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <input id="cheers" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="cheers">
+                        <h3>To health</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>Apple and health</li>
+                            </a>
+                            <a href="#">
+                                <li>Health on Apple Watch</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="boxes-nav-footer">
+                <div class="accordion">
+                    <input id="apple_values" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="apple_values">
+                        <h3>Apple values</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>Accessibility</li>
+                            </a>
+                            <a href="#">
+                                <li>Environment</li>
+                            </a>
+                            <a href="#">
+                                <li>Privacy</li>
+                            </a>
+                            <a href="#">
+                                <li>Responsibility of suppliers</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <input id="about" type="checkbox" class="accordion_input">
+                    <label class="accordion_label" for="about">
+                        <h3>About Apple</h3>
+                    </label>
+                    <div class="accordion_content">
+                        <ul class="list">
+                            <a href="#">
+                                <li>Newsroom</li>
+                            </a>
+                            <a href="#">
+                                <li>Apple leadership</li>
+                            </a>
+                            <a href="#">
+                                <li>Career Opportunities</li>
+                            </a>
+                            <a href="#">
+                                <li>Investors</li>
+                            </a>
+                            <a href="#">
+                                <li>Ethics and Compliance</li>
+                            </a>
+                            <a href="#">
+                                <li>Events</li>
+                            </a>
+                            <a href="#">
+                                <li>Account</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="limited-area footer-local">
+            <p>More ways to shop: <a href="#">find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
+            <p>Apple Media Services are provided by Apple Services LATAM LLC.</p>
+        </div>
+  
+        <div class="limited-area footer-copyright">
+            <div class="country">
+                <a href="#">
+                    <p>Unites States</p>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2023 Apple Inc. All rights reserved.</p>
+            </div>
+            <div class="links-copyright-footer">
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Term of Use</a></p>
+                <p><a href="#">Sales and Refunds</a></p>
+                <p><a href="#">Site Map</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="./bag-nav.js"></script>
+    <script src="./cart-count.js"></script>
+    <script src="./bag.js"></script>
+</body>
+</html>

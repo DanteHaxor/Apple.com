@@ -1,6 +1,6 @@
 const express=require('express')
 const adminRouter=express.Router()
-const bcrypt=require("bcrypt")
+const bcrypt=require("bcryptjs")
 const Adminmodel = require("../models/admin.model")
 const jwt=require("jsonwebtoken")
 require("dotenv").config()

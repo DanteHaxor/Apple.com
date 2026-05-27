@@ -155,10 +155,39 @@ main {
 
 .content-bag {
   width: 286px;
+  max-height: min(70vh, 520px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background-color: white;
   border: 1px solid rgba(128, 128, 128, 0.315);
   margin-top: 4px;
   border-radius: 18px;
+}
+
+#bitem {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 8px 12px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+#bitem::-webkit-scrollbar {
+  width: 6px;
+}
+
+#bitem::-webkit-scrollbar-thumb {
+  background: #c7c7cc;
+  border-radius: 6px;
+}
+
+#bagbtn {
+  flex-shrink: 0;
+  padding: 10px 12px 4px;
+  text-align: center;
 }
 
 .content-bag p {
@@ -173,6 +202,7 @@ main {
 
 .links-bag {
   width: 100%;
+  flex-shrink: 0;
 }
 
 .links-bag ul {
@@ -1044,10 +1074,19 @@ main {
 
   .content-bag {
     width: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     background-color: white;
     border-radius: 0;
     margin: 0;
     border: none;
+  }
+
+  #bitem {
+    max-height: none;
+    flex: 1 1 auto;
   }
 
   .content-bag p {
@@ -1371,17 +1410,56 @@ main {
     left: 0;
   }
 }
-.bag-pro{
+.bag-dropdown-preview {
+  padding: 16px 12px 8px;
+}
+
+.bag-dropdown-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #6e6e73;
+  text-align: center;
+}
+
+#bag-link {
+  cursor: pointer;
+}
+
+.bag-pro {
   display: flex;
-  text-align: center;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  padding: 10px 0;
+  border-bottom: 1px solid #e8e8ed;
 }
-.bag-pro img{
-  width: 55%;
+
+.bag-pro:last-child {
+  border-bottom: none;
 }
-.bag-pro div{
-  margin-top: 5%;
-  height: 50%;
-  text-align: center;
+
+.bag-pro img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.bag-pro div {
+  margin-top: 0;
+  height: auto;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
+.bag-pro h4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #1d1d1f;
 }
 #submit{
   background-color:#0070c9 ;

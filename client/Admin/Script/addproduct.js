@@ -16,7 +16,7 @@ addbtn.addEventListener("click",()=>{
 })
 let token=document.cookie.split("=")[1]
 async function postdata(obj){
-        let res=await fetch("https://pear-z5ta.onrender.com/api/products/addproduct",{
+        let res=await fetch(`${api}/products/addproduct`,{
         method:"POST",
         headers:{
             "content-type":"application/json",
@@ -26,6 +26,7 @@ async function postdata(obj){
     })
     if(res.ok){
         swal("",`${obj.title} has been added sucessfully`,"success")
+        await waitForPopup()
         window.location.reload()
     }
     }

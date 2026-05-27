@@ -12,7 +12,7 @@ login_btn.addEventListener("submit", (event) => {
 });
 
 async function auth(obj){
-	let res=await fetch("https://pear-z5ta.onrender.com/api/admin/login",{
+	let res=await fetch(`${api}/admin/login`,{
 		method: "POST",
 		headers:{
 			"content-type": "application/json"
@@ -21,6 +21,7 @@ async function auth(obj){
 	})
 	if(res.ok){
 		swal("", "Welcome Admin!", "success");
+		await waitForPopup();
 		window.location.href = "../dashboard.html";
 	}else{
 		swal("","Wrong Credentials!","warning");
